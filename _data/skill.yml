@@ -1,0 +1,20 @@
+- layout: left
+  name: Frontend
+  description: | # this will include new lines to allow paragraphs
+    * Flutter, Dart
+    * Riverpod, StateNotifier
+    * WebView, CachedNetworkImage
+    * Swift, SwiftUI
+- layout: left
+  name: Backend
+  description: | # this will include new lines to allow paragraphs
+    * FastAPI, Python
+    * REST API, httpx
+    * Firebase Auth
+    * MySQL, SQLite
+- layout: left
+  name: DevOps
+  description: | # this will include new lines to allow paragraphs
+    * GitHub Actions (AAB 빌드)
+    * App Store/Google Play 배포
+    * Git/GitHub

@@ -1,0 +1,12 @@
+- layout: left
+  company: 경기대진테크노파크
+  link: https://www.gdtp.or.kr/
+  job_title: 사원
+  dates: 2022.07 ~ 2023.01
+  quote: >
+    가구 제품의 품질 및 안전성 시험 및 인증을 수행하는 공공 시험 인증 기관
+  description: | # this will include new lines to allow paragraphs
+    * KC·ISO 규격에 따른 가구 내구성·강도·안정성 물성시험 수행
+    * 시험 데이터 측정·기록 및 규격 기준에 따른 합격 판정
+    * 시험 결과 보고서 작성 및 인증 절차 문서화 지원
+    * 제조사와 시험 일정 및 요구사항 커뮤니케이션
