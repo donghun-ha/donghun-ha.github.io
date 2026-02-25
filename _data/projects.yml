@@ -7,8 +7,9 @@
   quote: >
     Flutter 기반 AI 뉴스 요약 앱
   description: | # this will include new lines to allow paragraphs
-    키워드 검색 → 요약 → 상세 조회까지의 사용자 흐름을 설계하고 Flutter로 구현했습니다. 검색/요약/북마크 상태를 Riverpod(StateNotifier)로 분리해 화면 전환에서도 상태가 꼬이지 않도록 만들고, 요약은 상세 본문 우선 → 실패 시 검색 요약으로 대체하는 로직을 구성했습니다. 로컬 저장은 SQLite로 북마크/최근검색을 관리해 오프라인에서도 히스토리를 유지했습니다.
-
+    키워드 검색 → 요약 → 상세 조회까지의 사용자 흐름을 설계하고 Flutter로 구현했습니다. 
+    검색/요약/북마크 상태를 Riverpod(StateNotifier)로 분리해 화면 전환에서도 상태가 꼬이지 않도록 만들고, 요약은 상세 본문 우선 → 실패 시 검색 요약으로 대체하는 로직을 구성했습니다. 
+    로컬 저장은 SQLite로 북마크/최근검색을 관리해 오프라인에서도 히스토리를 유지했습니다.
     릴리즈에서 네트워크 실패가 발생해 AndroidManifest에 `INTERNET` 권한을 추가했고, 이미지 null 문제는 placeholder/에러 위젯 처리로 안정화했습니다. 상세 진입 시 요약이 잔존하는 이슈는 요약 상태를 초기화한 뒤 재요약하도록 수정해 해결했습니다.
 
 - layout: left
