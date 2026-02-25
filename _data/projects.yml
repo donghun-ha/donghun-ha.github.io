@@ -7,7 +7,7 @@
   quote: >
     Flutter 기반 AI 뉴스 요약 앱
   description: | # this will include new lines to allow paragraphs
-    NewsDigest AI는 긴 뉴스를 끝까지 읽지 않아도 핵심만 빠르게 파악할 수 있도록 AI 요약 → 검색 → 저장 흐름을 한 화면에 연결한 모바일 앱입니다. Flutter 3.x 기반에서 Riverpod 2.5.1로 검색/요약/북마크 상태를 분리했고, http 1.2.1·sqflite 2.3.3+1·webview_flutter 4.10·cached_network_image 3.4.1로 API 연동/로컬 저장/원문 보기/이미지 로딩을 구성했습니다. 릴리즈 네트워크 실패는 AndroidManifest `INTERNET` 권한 추가로 해결했고, 이미지 null은 placeholder 처리, 상세 요약 잔존은 상태 초기화 후 재요약으로 안정화했습니다.
+    NewsDigest AI는 긴 뉴스를 끝까지 읽지 않아도 핵심만 빠르게 파악할 수 있도록 AI 요약 → 검색 → 저장 흐름을 한 화면에 연결한 모바일 앱입니다. Flutter 3.24.0+ / Dart 3.5.0+ 기반에서 Riverpod 2.5.1로 검색·요약·북마크 상태를 분리했고, http 1.2.1·sqflite 2.3.3+1·webview_flutter 4.10.0·cached_network_image 3.4.1로 API 연동/로컬 저장/원문 보기/이미지 로딩을 구성했습니다. 릴리즈 네트워크 실패는 AndroidManifest `INTERNET` 권한 추가로 해결했고, 이미지 null은 placeholder 처리, 상세 요약 잔존은 상태 초기화 후 재요약으로 안정화했습니다.
 
 - layout: left
   company: DateSpot
@@ -18,7 +18,7 @@
   quote: >
     iOS 데이트 추천 앱 (SwiftUI)
   description: | # this will include new lines to allow paragraphs
-    사용자 맞춤 데이트 장소를 추천하고 즐겨찾기를 제공하는 iOS 앱으로, Swift/SwiftUI 기반 화면과 로그인/자동 로그인 흐름을 구현했습니다. Apple/Google 소셜 로그인과 Realm 자동로그인, 북마크/유저 페이지를 담당했고, OAuth 토큰 전송 순서 문제는 Firebase 로그인 완료 후 메인 스레드에서 API 호출하도록 수정했습니다. Redis 캐시 통신 오류는 보안 그룹 인바운드(6379) 오픈으로 해결해 캐싱이 정상 동작하도록 했습니다.
+    사용자 맞춤 데이트 장소를 추천하고 즐겨찾기를 제공하는 iOS 앱으로, Swift 5.0/SwiftUI 기반 화면과 로그인·자동 로그인 흐름을 구현했습니다. SPM 기반으로 Firebase iOS SDK 11.6.0, GoogleSignIn 8.0.0, RealmSwift 10.33.0, RediStack 1.6.2를 적용해 소셜 로그인과 로컬 저장을 구성했습니다. OAuth 토큰 전송 순서 문제는 Firebase 로그인 완료 후 메인 스레드에서 API 호출하도록 수정했고, Redis 캐시 통신 오류는 보안 그룹 인바운드(6379) 오픈으로 해결해 캐싱이 정상 동작하도록 했습니다.
 
 - layout: left
   company: RiverPark Mate
@@ -29,7 +29,7 @@
   quote: >
     실시간 주차 정보 앱
   description: | # this will include new lines to allow paragraphs
-    한강공원 주차 불편을 줄이기 위해 실시간 주차 가능 대수와 혼잡도 예측을 보여주는 Flutter 앱입니다. Flutter 3.5.x, GetX 4.6.6, http 1.2.2를 기반으로 메인 화면과 API 흐름을 구성하고, Google Maps 2.9.0·geolocator 13.0.2로 위치/지도 기능을 구현했습니다. Flutter↔FastAPI 간 JSON 포맷 불일치는 pandas 피처 정렬로 해결해 예측 결과가 안정적으로 노출되도록 했습니다.
+    한강공원 주차 불편을 줄이기 위해 실시간 주차 가능 대수와 혼잡도 예측을 보여주는 Flutter 앱입니다. Flutter 3.5.4 기반에서 GetX 4.6.6, http 1.2.2로 API 흐름을 구성하고, google_maps_flutter 2.9.0·geolocator 13.0.2로 지도/위치 기능을 구현했습니다. Firebase Core 3.6.0/Firestore 5.4.3/Firebase Auth 5.3.3로 로그인·채팅 흐름을 연결했습니다. Flutter↔FastAPI 간 JSON 포맷 불일치는 pandas 피처 정렬로 해결해 예측 결과가 안정적으로 노출되도록 했습니다.
 
 - layout: left
   company: PUREME (Carbon Footprint)
@@ -40,4 +40,4 @@
   quote: >
     탄소 절감 기록/시각화 앱
   description: | # this will include new lines to allow paragraphs
-    일상 활동을 기록하면 탄소 절감량을 계산하고 리포트로 보여주는 앱으로, Flutter 3.4.x 기반에서 GetX 4.6.6, http 1.2.2, Firebase Core 3.6.0/Firestore 5.4.4/Storage 12.3.2, syncfusion_flutter_charts 27.1.52를 사용해 UI·데이터·차트를 구성했습니다. 비활동 날짜까지 절감량이 포함되는 문제는 활동 날짜 집합 기준 계산으로 수정했고, L 환산 오류는 2.31kg/L 계수 적용으로 보정했으며, API 응답 result 필드 접근 오류는 문자열 비교 및 null 체크로 해결했습니다.
+    일상 활동을 기록하면 탄소 절감량을 계산하고 리포트로 보여주는 앱으로, Flutter 3.4.3 기반에서 GetX 4.6.6, http 1.2.2, Firebase Core 3.6.0/Firestore 5.4.4/Storage 12.3.2, syncfusion_flutter_charts 27.1.52, webview_flutter 4.8.0를 사용해 UI·데이터·차트를 구성했습니다. 비활동 날짜까지 절감량이 포함되는 문제는 활동 날짜 집합 기준 계산으로 수정했고, L 환산 오류는 2.31kg/L 계수 적용으로 보정했으며, API 응답 result 필드 접근 오류는 문자열 비교 및 null 체크로 해결했습니다.
