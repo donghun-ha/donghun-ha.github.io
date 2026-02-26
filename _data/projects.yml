@@ -18,7 +18,9 @@
   quote: >
     iOS 데이트 추천 앱 (SwiftUI)
   description: | # this will include new lines to allow paragraphs
-    사용자 맞춤 데이트 장소를 추천하고 즐겨찾기를 제공하는 iOS 앱으로, Swift 5.0/SwiftUI 기반 화면과 로그인·자동 로그인 흐름을 구현했습니다. SPM 기반으로 Firebase iOS SDK 11.6.0, GoogleSignIn 8.0.0, RealmSwift 10.33.0, RediStack 1.6.2를 적용해 소셜 로그인과 로컬 저장을 구성했습니다. OAuth 토큰 전송 순서 문제는 Firebase 로그인 완료 후 메인 스레드에서 API 호출하도록 수정했고, Redis 캐시 통신 오류는 보안 그룹 인바운드(6379) 오픈으로 해결해 캐싱이 정상 동작하도록 했습니다.
+    위치 기반 데이트 장소 추천 iOS 앱을 개발하며 SwiftUI 기반 화면 설계와 OAuth 로그인 구조를 구현했습니다.
+    로그인 상태와 서버 동기화를 분리해 인증 흐름을 안정화했고, 북마크 데이터를 서버 중심(Source of Truth) 구조로 설계하여 UI-데이터 일관성을 확보했습니다.
+    OAuth 토큰 전송 순서 이슈를 비동기 흐름 제어로 해결하고, Redis 캐시 통신 오류를 네트워크 보안 설정 점검을 통해 정상화하는 등 인증·상태 관리·캐시 구조 전반을 설계하고 안정화했습니다.
 
 - layout: left
   company: RiverPark Mate
