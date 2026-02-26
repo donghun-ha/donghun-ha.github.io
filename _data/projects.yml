@@ -1,7 +1,7 @@
 - layout: left
   company: NewsDigest AI
   link: https://alabaster-chocolate-fe8.notion.site/NewsDigest-AI-303b5e949065803285deca4a21e4dab5?source=copy_link
-  link_text: 상세보기
+  link_text: 포트폴리오 상세보기
   job_title: 개인프로젝트
   dates: 2025.12.07 ~ 2026.01.30
   quote: >
@@ -12,20 +12,27 @@
 - layout: left
   company: DateSpot
   link: https://alabaster-chocolate-fe8.notion.site/DateSpot-312b5e94906580cab4ded190cfd552f5?source=copy_link
-  link_text: 상세보기
+  link_text: 포트폴리오 상세보기
   job_title: 팀프로젝트
   dates: 2024.12.14 ~ 2024.12.31
   quote: >
     iOS 데이트 추천 앱 (SwiftUI)
-  description: | # this will include new lines to allow paragraphs
-    위치 기반 데이트 장소 추천 iOS 앱을 개발하며 SwiftUI 기반 화면 설계와 OAuth 로그인 구조를 구현했습니다.
-    로그인 상태와 서버 동기화를 분리해 인증 흐름을 안정화했고, 북마크 데이터를 서버 중심(Source of Truth) 구조로 설계하여 UI-데이터 일관성을 확보했습니다.
-    OAuth 토큰 전송 순서 이슈를 비동기 흐름 제어로 해결하고, Redis 캐시 통신 오류를 네트워크 보안 설정 점검을 통해 정상화하는 등 인증·상태 관리·캐시 구조 전반을 설계하고 안정화했습니다.
+  description: | 
+    위치 기반 데이트 장소 추천 iOS 앱에서 인증·상태·데이터 구조를 설계했습니다.
+
+    • 인증 구조 설계  
+      OAuth 로그인 및 자동 로그인 흐름 구현, 로그인 상태와 서버 동기화 분리로 인증 안정성 확보
+    • 상태 관리 구조 설계  
+      AppState 기반 전역 상태 관리로 로그인 상태 전이 단순화 및 화면 일관성 유지
+    • 데이터 일관성 확보  
+      북마크 기능을 서버 중심(Source of Truth) 구조로 설계하여 UI–서버 데이터 불일치 방지
+    • 비동기 흐름 제어 및 문제 해결  
+      OAuth 토큰 전송 순서 이슈를 호출 흐름 재정렬로 해결하고, Redis 캐시 통신 오류를 점검·수정하여 정상 동작 확보
 
 - layout: left
   company: RiverPark Mate
   link: https://alabaster-chocolate-fe8.notion.site/RiverPark-Mate-174b5e9490658087b0fdf50c0eb8194a?source=copy_link
-  link_text: 상세보기
+  link_text: 포트폴리오 상세보기
   job_title: 팀프로젝트
   dates: 2024.11.08 ~ 2024.11.22
   quote: >
@@ -36,7 +43,7 @@
 - layout: left
   company: PUREME (Carbon Footprint)
   link: https://alabaster-chocolate-fe8.notion.site/PUREME-174b5e9490658007978ef15eb006897e?source=copy_link
-  link_text: 상세보기
+  link_text: 포트폴리오 상세보기
   job_title: 팀프로젝트
   dates: 2024.10.01 ~ 2024.10.16
   quote: >
