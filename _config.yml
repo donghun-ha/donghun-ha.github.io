@@ -4,7 +4,7 @@ repository: donghun-ha/donghun-ha.github.io
 
 # Personal info
 name: 하동훈
-title: Mobile App Developer
+title: Mobile Frontend Developer
 email: hywlrma@gmail.com
 phone: 010-2425-5340
 # website: https://example.com
@@ -23,11 +23,12 @@ youtube_username: 하동훈-n8b5x
 # about_title: About Me
 about_profile_image: images/profile.jpg
 about_content: | 
-  모바일 프론트엔드 개발자로, Flutter · SwiftUI 기반의 상태 관리와 화면 전이 구조를 설계해왔습니다.<br/>
-  Riverpod(StateNotifierProvider)과 GetX(Rx)를 활용해 <strong>기능별 상태 분리</strong> 및 로딩·에러·데이터 흐름을 체계적으로 관리했습니다.<br/>
-  <mark>비동기 API 호출 순서 제어</mark>를 통해 OAuth 인증–자동 로그인–로그아웃 흐름에서 발생하던 데이터 동기화 오류를 개선했습니다.<br/>
-  ListView.builder, FutureBuilder 등을 활용해 <strong>리스트 렌더링 안정화</strong>를 구현하고, sqflite 기반 로컬 저장 구조로 사용자 맥락을 유지했습니다.<br/>
-  화면 구조 설계 → 상태 모델 정의 → API 연동 → 예외 처리 → UI 안정화의 흐름으로 구현하며 유지보수가 가능한 구조를 지향합니다.<br/>
+  <mark>모바일 프론트엔드 개발자</mark>로, Flutter · SwiftUI 기반에서 상태 관리와 화면 전이 구조를 설계하고 구현해왔습니다.<br/>
+  Riverpod(StateNotifierProvider)과 GetX(Rx)를 활용해 <strong>기능 단위 상태 모델링</strong>을 수행하고, 로딩·에러·데이터 흐름을 분리해 예측 가능한 UI 동작을 구현했습니다.<br/>
+  <mark>비동기 API 호출 순서 제어</mark>를 통해 OAuth 인증–자동 로그인–로그아웃 전환 과정에서 발생하던 데이터 동기화 오류를 개선하고, 전역 상태(AppState) 기반으로 화면 간 상태 불일치와 중복 갱신 문제를 최소화했습니다.<br/>
+  REST API 연동 과정에서는 응답 스키마를 기준으로 상태 구조를 먼저 정의한 뒤 UI를 연결했으며, sqflite 기반 로컬 저장 구조로 사용자 맥락을 유지했습니다.<br/>
+  또한 ListView.builder와 이미지 캐시 전략을 적용해 스크롤 성능을 안정화하고, 예외 상황과 빈 데이터까지 고려한 <strong>UI와 데이터 일관성</strong>을 구현했습니다.<br/>
+  기능 나열이 아닌 상태 안정성과 구조적 일관성을 중심으로 설계하는 모바일 프론트엔드 개발자를 지향합니다.<br/>
 
 
 # Projects Section
