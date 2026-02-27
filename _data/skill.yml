@@ -1,20 +1,22 @@
 - layout: left
-  name: Frontend
-  description: | # this will include new lines to allow paragraphs
-    * Flutter, Dart
-    * Riverpod, StateNotifier
-    * WebView, CachedNetworkImage
-    * Swift, SwiftUI
+  name: Mobile Frontend
+  description: |
+    * Flutter (Dart), Swift (SwiftUI)
+    * Riverpod (StateNotifier), GetX (Rx)
+    * ListView.builder, FutureBuilder 기반 렌더링 구조
+    * OAuth 기반 인증 연동 (Google / Apple)
+
 - layout: left
-  name: Backend
-  description: | # this will include new lines to allow paragraphs
-    * FastAPI, Python
-    * REST API, httpx
-    * Firebase Auth
-    * MySQL, SQLite
+  name: State & Networking
+  description: |
+    * 전역 상태 관리 (AppState) 및 상태 모델링
+    * 비동기 API 연동 및 로딩/에러 처리
+    * Firebase Auth, Firestore 연동
+    * sqflite / SQLite 기반 로컬 데이터 관리
+
 - layout: left
-  name: DevOps
-  description: | # this will include new lines to allow paragraphs
-    * GitHub Actions (AAB 빌드)
-    * App Store/Google Play 배포
-    * Git/GitHub
+  name: Collaboration & Release
+  description: |
+    * Git / GitHub 협업
+    * GitHub Actions 기반 빌드 자동화
+    * App Store / Google Play 배포 경험

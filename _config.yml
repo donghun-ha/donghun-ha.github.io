@@ -22,12 +22,12 @@ youtube_username: 하동훈-n8b5x
 # About Section
 # about_title: About Me
 about_profile_image: images/profile.jpg
-about_content: | # this will include new lines to allow paragraphs
-  Flutter 기반 **상태관리·네트워크 연동·로컬 저장·UI 안정화**를 끝까지 책임지는 모바일 앱 개발자입니다.<br/> 
-  Riverpod으로 <mark>예측 가능한 상태 흐름</mark>을 설계하고, REST API/에러·로딩 처리/SQLite 캐시/이미지·WebView까지 **실서비스 기능을 빠르게 안정화**합니다.<br/>
-  요구사항을 **기능 단위로 분해 → 상태 모델링 → API 연동 → 로컬 저장 → UI 폴리싱**으로 구현하며,<br/> 
-  데이터 흐름과 UX를 동시에 고려해 <mark>유지보수 가능한 구조</mark>를 만듭니다.<br/>
-  Swift/SwiftUI 경험과 App Store·Google Play 배포 경험을 바탕으로 출시까지 이끌었고, 테스트 코드의 중요성을 이해하고 기능 단위 검증을 주도합니다.<br/>
+about_content: | 
+  Flutter, SwiftUI 기반으로 상태 관리와 화면 전이를 직접 설계해온 모바일 프론트엔드 개발자입니다.<br/>
+  Riverpod(StateNotifierProvider)과 GetX(Rx, Controller 분리)를 활용해 검색·요약·북마크·랭킹 등 기능별 상태를 분리하고, 로딩·에러·데이터 흐름을 명확히 관리했습니다.<br/>
+  OAuth 로그인–자동 로그인–로그아웃 상태 전이를 AppState 기반으로 단순화하고, 비동기 API 호출 순서를 제어하여 인증 및 데이터 동기화 오류를 개선했습니다.<br/>
+  ListView.builder, CachedNetworkImage, FutureBuilder 등을 활용해 대량 리스트 렌더링과 이미지 로딩을 안정화하고, sqflite 기반 로컬 저장 구조로 사용자 맥락을 유지했습니다.<br/>
+  기능을 구현할 때 화면 구조 설계 → 상태 모델 정의 → API 연동 → 예외 처리 → UI 안정화 순으로 접근하며, 유지보수가 용이한 상태 중심 구조를 지향합니다.<br/>
 
 
 # Projects Section
