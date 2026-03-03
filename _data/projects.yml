@@ -7,22 +7,22 @@
   quote: >
     Flutter 기반 AI 뉴스 요약 앱
   description: |
-    Riverpod(StateNotifierProvider) 기반 상태 분리와 비동기 흐름 제어를 설계한 Flutter 프로젝트입니다.
+    Riverpod(StateNotifierProvider) 기반으로 검색·요약·북마크를 분리 설계하고, 상태 충돌을 방지한 Flutter 프로젝트입니다.
 
-    * 기능 단위 상태 모델링
-      검색·요약·북마크 상태를 독립적으로 관리해 로딩·에러·데이터 흐름을 명확히 분리하고 UI 충돌 최소화
+    * 상태 범위 분리 설계
+      검색 결과(items), 요약(Map<int,String>), 북마크 상태를 각각 독립 StateNotifier로 관리해 요약 로딩이 리스트 UI를 재빌드하지 않도록 rebuild 범위 제한
 
-    * 상세 진입 시 상태 초기화 정책
-      요약 상태를 초기화 후 재요청하도록 설계해 화면 재진입 시 데이터 중첩 없이 안정적인 UX 유지
+    * 상세 화면 진입 로직 제어
+      상세 진입 시 기존 요약 상태를 clear한 뒤 summarize API를 재호출하도록 구현해 빠른 화면 전환 시 데이터 중첩 방지
 
-    * IndexedStack 기반 탭 유지 구조
-      화면 재생성을 방지해 불필요한 rebuild 및 네트워크 재호출 최소화
+    * 탭 재생성 방지 구조
+      IndexedStack으로 탭을 유지해 탭 전환 시 Provider 재생성과 네트워크 재호출 최소화
 
-    * sqflite 영속화 설계
-      북마크·최근검색을 로컬 DB에 저장해 앱 재실행 후에도 사용자 맥락 유지
+    * 로컬 영속화 흐름 구현
+      sqflite Repository 계층을 분리해 북마크·최근검색을 저장하고 앱 시작 시 DB 조회 후 상태에 주입
 
-    * 빌더 기반 리스트 최적화
-      ListView.builder와 CachedNetworkImage를 활용해 placeholder·캐시 전략 적용, 스크롤 안정성 확보
+    * 리스트 렌더링 최적화
+      ListView.builder로 지연 렌더링하고 CachedNetworkImage placeholder·캐시 전략으로 이미지 null 및 스크롤 끊김 완화
 
 
 - layout: left
@@ -34,19 +34,19 @@
   quote: >
     iOS 데이트 추천 앱 (SwiftUI)
   description: |
-    SwiftUI 환경에서 OAuth 인증과 전역 상태 흐름을 설계한 iOS 프로젝트입니다.
+    SwiftUI에서 OAuth 인증 흐름과 전역 상태 전이를 직접 설계한 iOS 프로젝트입니다.
 
-    * AppState 기반 전역 인증 상태 관리
-      로그인 성공 시 전역 상태를 갱신한 뒤 화면을 전환하도록 설계해 인증–UI 상태 일관성 확보
+    * 전역 인증 상태 전이 설계
+      로그인 성공 시 AppState를 먼저 갱신한 뒤 화면을 dismiss하도록 구현해 인증 완료 전 UI 전환 문제 방지
 
-    * 로그인–서버 동기화 분리 구조
-      로컬 인증 상태 저장과 서버 전송을 분리해 서버 실패 상황에서도 로그인 상태 안정 유지
+    * 인증–서버 동기화 분리 구현
+      로그인 성공 후 로컬 저장(saveUserData)과 서버 전송을 Task로 분리해 서버 실패가 로그인 상태에 영향을 주지 않도록 설계
 
-    * Realm 기반 자동 로그인 구현
-      사용자 정보를 영속화하고 앱 시작 시 복원해 재로그인 UX 제거
+    * Realm 기반 자동 로그인
+      사용자 정보를 Realm에 저장하고 앱 시작 시 존재 여부를 확인해 초기 Root 화면 분기 처리
 
-    * 서버 기준 북마크 반영 정책
-      서버 성공 응답 이후 로컬 상태를 갱신하는 구조로 데이터 충돌 방지
+    * 서버 응답 기반 북마크 정책
+      북마크 API 성공 응답 이후 로컬 상태를 갱신하도록 구현해 optimistic update로 인한 데이터 불일치 방지
 
 
 - layout: left
@@ -58,19 +58,19 @@
   quote: >
     실시간 주차 정보 앱
   description: |
-    GetX 기반 반응형 상태 관리와 순차 API 호출 흐름을 설계한 Flutter 프로젝트입니다.
+    GetX 기반 상태 관리와 await 체이닝 구조로 비동기 API 흐름을 제어한 Flutter 프로젝트입니다.
 
-    * 이중 로딩 상태 분리 설계
-      데이터 준비 여부와 예측 로딩 상태를 구분해 화면 진입 조건을 명확히 분리
+    * 순차 호출 제어 구현
+      공원 선택 시 getParking() 완료 후 getPrediction()을 await 구조로 호출해 응답 순서 역전으로 인한 UI 오류 방지
 
-    * 순차 API 호출 구조 고정
-      공원 선택 → 주차 현황 → 예측 요청 순으로 호출 흐름을 설계해 응답 순서에 따른 UI 오류 방지
+    * 로딩 상태 이원화
+      주차 데이터 준비 여부와 예측 로딩 상태를 RxBool로 분리해 데이터 미수신 상태에서 Detail 화면 진입 차단
 
-    * GetX 기반 상태 공유 구조
-      위치·주차·예측 데이터를 중앙 관리해 화면 간 데이터 일관성 확보
+    * 중앙 상태 공유 구조
+      LocationHandler에서 위치·주차·예측 데이터를 관리하고 Obx로 필요한 위젯만 갱신
 
-    * tryParse 기반 예외 방어
-      숫자 파싱 예외 대응으로 null 및 형변환 오류로 인한 크래시 예방
+    * 데이터 파싱 방어 처리
+      tryParse 기반 숫자 변환 처리로 null 및 형변환 예외로 인한 크래시 예방
 
 
 - layout: left
@@ -82,16 +82,16 @@
   quote: >
     탄소 절감 기록/시각화 앱
   description: |
-    GetX 컨트롤러 분리 구조와 실시간 데이터 반영을 설계한 Flutter 프로젝트입니다.
+    GetX 기반 Controller 분리 구조와 실시간 데이터 스트림 연동을 구현한 Flutter 프로젝트입니다.
 
-    * 기능별 상태 분리 설계
-      Rank·Chart·User·Feed 상태를 역할 단위로 분리해 화면 전환 시 상태 간섭 최소화
+    * 역할 단위 Controller 구조
+      RankHandler·ChartHandler·UserHandler·FeedHandler로 상태를 분리하고 공통 유저 상태를 상위 계층에서 공유
 
-    * Firestore 스트림 기반 반응형 갱신
-      snapshots().listen()으로 수신한 데이터를 Rx 상태에 반영해 UI 즉시 업데이트
+    * Firestore 스트림 수신 구현
+      snapshots().listen()으로 수신한 피드 데이터를 RxList에 반영해 데이터 변경 즉시 UI 업데이트
 
-    * Future + Rx 병행 처리 구조
-      초기 로딩과 이후 상태 변화를 분리해 화면 깜빡임 완화 및 UX 안정화
+    * 초기 로딩과 반응형 갱신 분리
+      초기 데이터는 Future 기반으로 로드하고 이후 상태 변화는 Obx 기반으로 갱신해 화면 깜빡임 완화
 
-    * 활동 날짜 기준 계산 로직
-      계산 기준을 재정의해 리포트 수치 일관성 확보
+    * 계산 로직 기준 재정의
+      활동 날짜 집합을 기준으로 합산하도록 수정해 비활동일 포함 오류 제거 및 리포트 수치 일관성 확보
