@@ -18,6 +18,10 @@ github_username: donghun-ha
 # linkedin_username: jojoldu
 # pinterest_username: jekyll
 youtube_username: 하동훈-n8b5x
+additional_links:
+  - title: Notion Portfolio
+    icon: fas fa-book
+    url: https://alabaster-chocolate-fe8.notion.site/173b5e94906580c0acdcedb57029691a?source=copy_link
 
 # About Section
 # about_title: About Me
