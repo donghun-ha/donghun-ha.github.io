@@ -2,7 +2,7 @@
 
 * [템플릿](https://github.com/sproogen/modern-resume-theme)
 
-### 구동방법
+##ㄴ 구동방법
 
 ```bash
 bundle install
