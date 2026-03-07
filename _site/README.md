@@ -1,8 +1,8 @@
-# 이력서
+# 하동훈 이력서
 
 * [템플릿](https://github.com/sproogen/modern-resume-theme)
 
-##ㄴ 구동방법
+## 구동방법
 
 ```bash
 bundle install
