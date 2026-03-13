@@ -27,7 +27,7 @@ additional_links:
 # about_title: About Me
 # about_profile_image: images/profile.jpg
 about_content: | 
-  <span class="hl-box">모바일 프론트엔드 개발자</span>로서 Flutter · SwiftUI 기반에서 <strong>상태 흐름과 화면 전이 타이밍</strong>을 구조적으로 설계해왔습니다.<br/>
+  <mark>모바일 프론트엔드 개발자</mark>로서 Flutter · SwiftUI 기반에서 상태 흐름과 화면 전이 타이밍을 구조적으로 설계해왔습니다.<br/>
   Riverpod(StateNotifierProvider)과 GetX(Rx)를 활용해 기능 단위로 상태를 모델링하고,<br/> 
   로딩·에러·데이터 상태를 명확히 분리해 <strong>비동기 요청이 겹쳐도 UI가 흔들리지 않도록</strong> 구현했습니다.<br/>
   OAuth 인증 전환, 순차 API 호출, 상세 화면 재진입 등 비동기 흐름에서 발생할 수 있는 상태 불일치를 호출 순서 고정과 전역 상태 기반 제어로 해결했습니다.<br/>
