@@ -5,7 +5,7 @@
   job_title: 개인프로젝트
   dates: 2025.12.02 ~ 2026.02.07
   quote: >
-    비동기 상태 충돌을 제어한 Flutter AI 뉴스 요약 앱
+    <span class="result-label">비동기 상태 충돌을 제어한 Flutter AI 뉴스 요약 앱</span>
   description: |
     Riverpod(StateNotifierProvider) 기반으로 상태 범위를 분리하고,
     화면 전환과 네트워크 타이밍을 통제한 Flutter 프로젝트입니다.
@@ -38,7 +38,7 @@
   job_title: 팀프로젝트
   dates: 2024.12.17 ~ 2024.12.31
   quote: >
-    인증 상태 전이를 통제한 SwiftUI 앱
+    <span class="result-label">인증 상태 전이를 통제한 SwiftUI 앱</span>
   description: |
     OAuth 인증 완료 시점과 화면 전환 타이밍을 직접 설계한 iOS 프로젝트입니다.
 
@@ -66,7 +66,7 @@
   job_title: 팀프로젝트
   dates: 2024.11.08 ~ 2024.11.22
   quote: >
-    순차 API 흐름을 제어한 지도 기반 Flutter 앱
+    <span class="result-label">순차 API 흐름을 제어한 지도 기반 Flutter 앱</span>
   description: |
     GetX 기반 상태 관리와 순차 호출 구조로
     실시간 데이터와 예측 데이터를 동기화한 Flutter 프로젝트입니다.
@@ -95,7 +95,7 @@
   job_title: 팀프로젝트
   dates: 2024.10.01 ~ 2024.10.16
   quote: >
-    탄소 절감 기록/시각화 앱
+    <span class="result-label">탄소 절감 기록/시각화 앱</span>
   description: |
     입력→계산→반영 흐름을 상태 기반으로 고정해 결과 신뢰성을 확보한 Flutter 프로젝트입니다.
 
