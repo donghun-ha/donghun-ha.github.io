@@ -3,20 +3,28 @@
   description: |
     * Flutter (Dart), Swift (SwiftUI)
     * Riverpod (StateNotifier), GetX (Rx)
-    * ListView.builder, FutureBuilder 기반 렌더링 구조
-    * OAuth 기반 인증 연동 (Google / Apple)
+    * Google Maps SDK, Geolocator
+    * WebView, CachedNetworkImage
+    * ListView.builder, Obx, FutureBuilder
 
 - layout: left
-  name: State & Networking
+  name: State Management
   description: |
-    * 전역 상태 관리 (AppState) 및 상태 모델링
-    * 비동기 API 연동 및 로딩/에러 처리
-    * Firebase Auth, Firestore 연동
-    * sqflite / SQLite 기반 로컬 데이터 관리
+    * Riverpod (StateNotifier)
+    * GetX (Rx)
+    * 상태 모델링 (로딩/에러/데이터 분리)
+
+- layout: left
+  name: Networking & Storage
+  description: |
+    * REST API 연동 (http)
+    * Firebase Auth / Firestore / Storage
+    * MySQL, sqflite(SQLite), GetStorage
 
 - layout: left
   name: Collaboration & Release
   description: |
     * Git / GitHub 협업
-    * GitHub Actions 기반 빌드 자동화
-    * App Store / Google Play 배포 경험
+    * GitHub Actions (CI)
+    * Figma 협업
+    * App Store / Google Play 배포
