@@ -17,14 +17,14 @@
 - layout: left
   name: Networking & Storage
   description: |
-    * REST API 연동 (http)
+    * REST API (http)
     * Firebase Auth / Firestore / Storage
     * MySQL, sqflite(SQLite), GetStorage
 
 - layout: left
   name: Collaboration & Release
   description: |
-    * Git / GitHub 협업
-    * GitHub Actions (CI)
-    * Figma 협업
+    * Git / GitHub
+    * Notion
+    * Figma
     * App Store / Google Play 배포
