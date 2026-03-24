@@ -95,7 +95,7 @@
   job_title: 팀프로젝트
   dates: 2024.10.01 ~ 2024.10.16
   quote: >
-    <span class="result-label">탄소 절감 기록/시각화 앱</span>
+    <span class="result-label">탄소 절감 기록/시각화을 기반으로 하는 랭킹시스템 앱</span>
   description: |
     입력→계산→반영 흐름을 상태 기반으로 고정해 결과 신뢰성을 확보한 Flutter 프로젝트입니다.
 
